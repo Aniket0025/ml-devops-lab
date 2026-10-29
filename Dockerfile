@@ -1,10 +1,10 @@
-
 FROM python:3.12-slim
 
 WORKDIR /app
 
 COPY requirements.txt .
-RUN pip install --no-cache-dir --timeout=120 --retries=10 -r requirements.txt
+
+RUN pip install --no-cache-dir --timeout=300 --retries=15 -r requirements.txt
 
 COPY app.py hello.py test_hello.py ./
 
